@@ -1,0 +1,9 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "DataFileUploader";
+
+message FileTransferNotification {
+  string file_name = 1;
+  int64 file_size_bytes = 2;
+  int32 num_parts = 3;
+}
