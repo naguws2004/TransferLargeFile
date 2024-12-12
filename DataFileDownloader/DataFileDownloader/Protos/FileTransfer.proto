@@ -1,0 +1,17 @@
+﻿syntax = "proto3";
+
+option csharp_namespace = "DataFileGrpcService";
+
+package filetransfer;
+
+service FileTransfer {
+  rpc DownloadFile (DownloadFileRequest) returns (stream DownloadFileResponse);
+}
+
+message DownloadFileRequest {
+  string filename = 1;
+}
+
+message DownloadFileResponse {
+  bytes chunk = 1;
+}

@@ -9,10 +9,12 @@
 
   <ItemGroup>
 	<Protobuf Include="Protos\FileTransferNotification.proto" GrpcServices="Client" />
-	<Protobuf Include="Protos\greet.proto" GrpcServices="Client" />
+    <Protobuf Include="Protos\FileTransfer.proto" GrpcServices="Client" />
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="bin\Debug\net8.0\data\" />
+    <Folder Include="data\" />
     <Folder Include="Protos\" />
   </ItemGroup>
 
