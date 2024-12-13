@@ -64,7 +64,9 @@ namespace DataFileCreator
         {
             string filePath = Path.Combine(_startupPath, "data", tempFileName);
             string dataFilePath = Path.Combine(_startupPath, "data", dataFileName);
+            Console.WriteLine("Trying to rename File at: " + filePath);
             File.Move(filePath, dataFilePath);
+            Console.WriteLine("File renamed to: " + dataFilePath);
         }
 
         public static bool FileExists(string fileName)

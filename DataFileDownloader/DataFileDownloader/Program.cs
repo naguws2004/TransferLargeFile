@@ -5,7 +5,7 @@ using Grpc.Net.Client;
 
 string _startupPath = Directory.GetCurrentDirectory();
 
-using var channel = GrpcChannel.ForAddress("https://localhost:7134");
+using var channel = GrpcChannel.ForAddress("http://localhost:32772");
 var client = new FileTransferNotification.FileTransferNotificationClient(channel);
 
 var fileStatus = await client.IsReadyForDownloadAsync(
